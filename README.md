@@ -13,6 +13,7 @@ Key Generation: Each party generates its private key (a and b) without sharing i
 Public Key Calculation: Using the agreed-upon parameters and private keys, each party calculates its public key.
 
 Party A: A = g^a mod p
+
 Party B: B = g^b mod p
 Key Exchange: Parties exchange their public keys.
 
