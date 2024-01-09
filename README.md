@@ -21,7 +21,9 @@ Key Exchange: Parties exchange their public keys.
 Shared Secret Calculation: Both parties independently compute a shared secret using the received public key and their private key.
 
 Party A: s = B^a mod p
+
 Party B: s = A^b mod p
+
 Result: Both parties now share a common secret key (s) without ever explicitly exchanging their private keys.
 
 
