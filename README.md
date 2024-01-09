@@ -15,6 +15,7 @@ Public Key Calculation: Using the agreed-upon parameters and private keys, each 
 Party A: A = g^a mod p
 
 Party B: B = g^b mod p
+
 Key Exchange: Parties exchange their public keys.
 
 Shared Secret Calculation: Both parties independently compute a shared secret using the received public key and their private key.
