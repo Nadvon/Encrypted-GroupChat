@@ -28,7 +28,7 @@ Party B: s = A^b mod p
 Result: Both parties now share a common secret key (s) without ever explicitly exchanging their private keys.
 
 ## Usage
-First open the server, then the clients.
+First change the IP and PORT then open the server and then the clients.
 
 
 ![My Image](images/image.png)
