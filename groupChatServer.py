@@ -13,7 +13,7 @@ PORT = 7877
 modNum = 23
 pwrNum = 9
 privateKey = random.randint(1, modNum - 1)
-publicKey = pwrNum ^ privateKey % modNum
+publicKey = pwrNum ** privateKey % modNum
 
 # A dictionary for addresses names
 addrName = {
@@ -44,7 +44,7 @@ def listenNewClients(s):
 
         data = conn.recv(4)
         clientPublicKey = int.from_bytes(data, byteorder='little')
-        sharedKey = clientPublicKey ^ privateKey % modNum
+        sharedKey = clientPublicKey ** privateKey % modNum
         shared_key_bytes = sharedKey.to_bytes(32, 'big')
         encoded_shared_key = base64.urlsafe_b64encode(shared_key_bytes)
         fernet = Fernet(encoded_shared_key)
