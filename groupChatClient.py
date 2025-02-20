@@ -45,8 +45,8 @@ def connect_server(ip, port):
     privateKey = random.randint(1, modNum - 1)
 
     # Calculating the shared key   
-    publicKey = pwrNum ^ privateKey % modNum
-    sharedKey = serverPublicKey ^ privateKey % modNum
+    publicKey = pwrNum ** privateKey % modNum
+    sharedKey = serverPublicKey ** privateKey % modNum
     shared_key_bytes = sharedKey.to_bytes(32, 'big')
     encoded_shared_key = base64.urlsafe_b64encode(shared_key_bytes)
 
